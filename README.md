@@ -311,3 +311,19 @@ var john = new Person('John','Smith',30);
    with a password as an argument  */
 var myBalance = john.askTeller(1234);
 ```
+# review
+```
+var languages = {
+    english: "Hello!",
+    french: "Bonjour!",
+    notALanguage: 4,
+    spanish: "Hola!"
+};
+
+// print hello in the 3 different languages
+for(var lang in languages){
+    if((typeof languages[lang]) === "string"){
+        console.log(languages[lang]);
+        }
+}
+```
