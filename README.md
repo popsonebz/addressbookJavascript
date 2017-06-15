@@ -196,7 +196,7 @@ function Penguin(name){
     this.name = name;
     this.numLegs = 2;}
 
-// set its prototype to be a new instance of Animal. The Penguin class inherits the prototype property of Animal i.e method sayName
+// set its prototype to be a new instance of Animal. The Penguin class inherits the properties and methods of Animal
 Penguin.prototype = new Animal();
 
 ```
