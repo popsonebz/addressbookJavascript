@@ -410,3 +410,29 @@ cashRegister.scan("magazine");
 //Show the total bill
 console.log('Your bill is '+cashRegister.total);
 ```
+# more effienct than the above
+```
+var cashRegister = {
+    total:0,
+    add: function(itemCost){
+        this.total += itemCost;
+    },
+    scan: function(item, number) {
+        switch (item) {
+        case "eggs": this.add(0.98 * number); break;
+        case "milk": this.add(1.23 * number); break;
+        case "magazine": this.add(4.99 * number); break;
+        case "chocolate": this.add(0.45 * number); break;
+        }
+    }
+};
+
+// scan each item 4 times
+cashRegister.scan("eggs", 4);
+cashRegister.scan("milk", 4);
+cashRegister.scan("magazine", 4);
+cashRegister.scan("chocolate", 4);
+
+//Show the total bill
+console.log('Your bill is '+cashRegister.total);
+```
