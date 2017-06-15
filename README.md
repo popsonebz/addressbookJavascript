@@ -199,4 +199,7 @@ function Penguin(name){
 // set its prototype to be a new instance of Animal. The Penguin class inherits the properties and methods of Animal
 Penguin.prototype = new Animal();
 
+var penguin = new Penguin("water penguin");
+penguin.sayName()
+
 ```
