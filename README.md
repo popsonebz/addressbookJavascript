@@ -267,3 +267,28 @@ console.log(john.bankBalance); // note, this fails because bankBalance is set to
 var myBalance = john.getBalance(); // only way to access private variables
 console.log(myBalance);
 ```
+# creating and calling private methods
+```
+function Person(first,last,age) {
+   this.firstname = first;
+   this.lastname = last;
+   this.age = age;
+   var bankBalance = 7500;
+  
+   var returnBalance = function() {
+      return bankBalance;
+   };
+       
+   // create the new function here
+   this.askTeller = function(){
+       return returnBalance
+       };
+}
+
+var john = new Person('John','Smith',30);
+
+var myBalanceMethod = john.askTeller();
+var myBalance = myBalanceMethod();
+console.log(myBalance);
+
+```
