@@ -220,7 +220,7 @@ var emperor = new Emperor("small emperor");
 console.log(emperor.numLegs);
 ```
 # inheritance 2
-``
+```
 // original classes
 function Animal(name, numLegs) {
     this.name = name;
@@ -245,4 +245,25 @@ var myEmperor = new Emperor("Jules");
 console.log( myEmperor.saying ); // should print "Waddle waddle"
 console.log( myEmperor.numLegs ); // should print 2
 console.log( myEmperor.isAlive ); // should print true
-``
+```
+# inheritance 3: Public and private variables
+```
+function Person(first,last,age) {
+   this.firstname = first; // this is a public variable
+   this.lastname = last;
+   this.age = age;
+   var bankBalance = 7500; // this is a private variable
+  
+   this.getBalance = function() {
+      // your code should return the bankBalance
+      return bankBalance;
+   };
+}
+
+var john = new Person('John','Smith',30);
+console.log(john.bankBalance); // note, this fails because bankBalance is set to private
+
+// create a new variable myBalance that calls getBalance()
+var myBalance = john.getBalance(); // only way to access private variables
+console.log(myBalance);
+```
