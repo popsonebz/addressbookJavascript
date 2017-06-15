@@ -42,3 +42,9 @@ function list() {
 contacts[contacts.length]=add("john", "sow", "john@gmail.com","(650) 888-8888" );
 list();
 ```
+
+
+```
+console.log( myObj.hasOwnProperty('name') ); // should print true
+console.log( myObj.hasOwnProperty('nickname') ); // should print false
+```
