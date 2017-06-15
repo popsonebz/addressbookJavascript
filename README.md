@@ -100,6 +100,6 @@ var snoopy = new Dog("Beagle");
 snoopy.bark = function() {
   console.log("Woof");
 };
-// this causes an error, because snoopy doesn't know how to bark!
+
 snoopy.bark();
 ```
