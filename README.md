@@ -103,3 +103,22 @@ snoopy.bark = function() {
 
 snoopy.bark();
 ```
+# class 3
+```
+function Person(name,age) {
+  this.name = name;
+  this.age = age;
+}
+// a function that prints the name of any given person
+var printPersonName = function (p) {
+  console.log(p.name);
+};
+
+var bob = new Person("Bob Smith", 30);
+printPersonName(bob);
+
+// make a person called me with your name and age
+var me = new Person("ebenezer", 28);
+// then use printPersonName to print your name
+printPersonName(me);
+```
